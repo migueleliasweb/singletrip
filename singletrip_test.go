@@ -55,7 +55,7 @@ func TestSingleTripAndReset(t *testing.T) {
 	total := 1000
 	wg.Add(total)
 
-	st := &singletrip.SingleTrip[bool]{}
+	st := singletrip.NewSingleTrip[bool]()
 
 	for i := range total {
 		go func() {
